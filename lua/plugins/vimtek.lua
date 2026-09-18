@@ -5,5 +5,7 @@ return {
   init = function()
     -- VimTeX configuration goes here, e.g.
     vim.g.vimtex_view_method = "zathura"
+    -- Non aprire la finestra di quickfix se ci sono solo warning
+    vim.g.vimtex_quickfix_open_on_warning = 0
   end
 }
