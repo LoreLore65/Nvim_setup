@@ -34,6 +34,7 @@ vim.keymap.set("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<cr>", { desc = "Buffer 
 
 --Open Errors list
 vim.keymap.set('n', '<leader>x', vim.diagnostic.setloclist, { desc = "Apri lista errori del file (loclist)" })
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = "Mostra diagnostica nel popup" })
 
 -- Start Lualine
 require('lualine').setup()
@@ -80,6 +81,7 @@ require("mason-lspconfig").setup({
 
 -- new lspconfig API (nvim-lspconfig v2+)
 --vim.lsp.config("clangd", {})
+--vim.lsp.config("lspconfig")
 vim.lsp.enable("clangd")
 vim.lsp.enable("pyright")
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, opts)
