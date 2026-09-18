@@ -70,6 +70,9 @@ vim.g.loaded_netrwPlugin = 1
 -- optionally enable 24-bit colour
 vim.opt.termguicolors = true
 
+-- seamless copy-pasting
+vim.opt.clipboard = "unnamedplus"
+
 -- Startup mason LSP
 require("mason-lspconfig").setup({
   ensure_installed = { "clangd", "pyright" },
