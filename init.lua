@@ -1,3 +1,8 @@
+-- Attiva la gestione nativa del titolo della finestra da parte di Neovim, questa e la funzione successiva rallentano abbastanza l'avvio di neovim, da tenere a mente
+vim.opt.title = true
+-- Imposta esattamente cosa deve comparire nel titolo del terminale
+vim.opt.titlestring = "Neovim"
+
 --Bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 
@@ -70,6 +75,11 @@ vim.g.loaded_netrwPlugin = 1
 
 -- optionally enable 24-bit colour
 vim.opt.termguicolors = true
+
+
+vim.g.vimtex_compiler_latexmk = {
+  aux_dir = '.build',
+}
 
 -- seamless copy-pasting
 vim.opt.clipboard = "unnamedplus"
